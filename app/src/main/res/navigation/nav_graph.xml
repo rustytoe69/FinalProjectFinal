@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.finalprojectfinal.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_stuffedAnimalListFragment"
+            app:destination="@id/stuffedAnimalListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stuffedAnimalListFragment"
+        android:name="com.example.finalprojectfinal.StuffedAnimalListFragment"
+        android:label="fragment_stuffed_animal_list"
+        tools:layout="@layout/fragment_stuffed_animal_list" >
+        <action
+            android:id="@+id/action_stuffedAnimalListFragment_to_addStuffedAnimalFragment"
+            app:destination="@id/addStuffedAnimalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addStuffedAnimalFragment"
+        android:name="com.example.finalprojectfinal.AddStuffedAnimalFragment"
+        android:label="fragment_add_stuffed_animal"
+        tools:layout="@layout/fragment_add_stuffed_animal" />
+</navigation>
