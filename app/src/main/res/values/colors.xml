@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="background">#ffeaea</color>
+    <color name="secondLightestPink">#ffe1e1</color>
+    <color name="middlePink">#ffd8d8</color>
+    <color name="secondDarkestPink">#ffc3c3</color>
+    <color name="mainText">#ffb0b0</color>
 </resources>
