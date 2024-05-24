@@ -27,5 +27,14 @@
         android:id="@+id/addStuffedAnimalFragment"
         android:name="com.example.finalprojectfinal.AddStuffedAnimalFragment"
         android:label="fragment_add_stuffed_animal"
-        tools:layout="@layout/fragment_add_stuffed_animal" />
+        tools:layout="@layout/fragment_add_stuffed_animal" >
+        <action
+            android:id="@+id/action_addStuffedAnimalFragment_to_stuffedAnimalDetailsFragment"
+            app:destination="@id/stuffedAnimalDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stuffedAnimalDetailsFragment"
+        android:name="com.example.finalprojectfinal.StuffedAnimalDetailsFragment"
+        android:label="fragment_stuffed_animal_details"
+        tools:layout="@layout/fragment_stuffed_animal_details" />
 </navigation>
