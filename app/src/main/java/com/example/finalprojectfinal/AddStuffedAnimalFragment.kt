@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import androidx.fragment.app.activityViewModels
 import com.example.finalprojectfinal.databinding.FragmentAddStuffedAnimalBinding
 import com.example.finalprojectfinal.databinding.FragmentMainBinding
 import com.example.finalprojectfinal.databinding.FragmentStuffedAnimalListBinding
@@ -14,6 +15,8 @@ class AddStuffedAnimalFragment : Fragment() {
 
     private var _binding: FragmentAddStuffedAnimalBinding? = null
     private val binding get() = _binding!!
+
+    private val viewModel: ViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
