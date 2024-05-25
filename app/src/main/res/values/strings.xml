@@ -15,4 +15,5 @@
     </string-array>
 
     <string name="snackbar_text">Welcome to your new stuffed animal tracker :)</string>
+    <string name="toast_text">Your stuffed friend has been added :)</string>
 </resources>

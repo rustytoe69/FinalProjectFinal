@@ -33,6 +33,7 @@ class MainFragment : Fragment() {
 
     private val viewModel: ViewModel by activityViewModels()
 
+    lateinit var mediaPlayer: MediaPlayer
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,10 +43,14 @@ class MainFragment : Fragment() {
         _binding= FragmentMainBinding.inflate(inflater, container, false)
         val rootView = binding.root
 
+        mediaPlayer=MediaPlayer.create(context,R.raw.happymusic)
+        mediaPlayer.setLooping(true)
+        mediaPlayer.start()
+
         //navigation
         binding.clickMeTextView.setOnClickListener { view ->
             rootView.findNavController().navigate(R.id.action_mainFragment_to_stuffedAnimalListFragment)
-            val mySnackbar = Snackbar.make(requireActivity().findViewById(android.R.id.content),R.string.snackbar_text,Snackbar.LENGTH_SHORT).show()
+            val mySnackbar = Snackbar.make(requireActivity().findViewById(android.R.id.content),R.string.snackbar_text,Snackbar.LENGTH_LONG).show()
         }
 
         return rootView

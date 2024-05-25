@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import com.example.finalprojectfinal.databinding.FragmentAddStuffedAnimalBinding
@@ -36,6 +37,8 @@ class AddStuffedAnimalFragment : Fragment() {
         //for navigation
         binding.addStuffedAnimalToListTextView.setOnClickListener { view ->
             rootView.findNavController().navigateUp()
+            val myToast = Toast.makeText(requireActivity(),R.string.toast_text, Toast.LENGTH_SHORT).show()
+
         }
 
 
