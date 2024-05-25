@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import com.example.finalprojectfinal.databinding.FragmentAddStuffedAnimalBinding
 import com.example.finalprojectfinal.databinding.FragmentMainBinding
 import com.example.finalprojectfinal.databinding.FragmentStuffedAnimalListBinding
@@ -31,6 +32,14 @@ class AddStuffedAnimalFragment : Fragment() {
             R.array.stuffed_animal_types,android.R.layout.simple_spinner_item)
         stuffedAnimalArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.animalTypeSpinner.adapter=stuffedAnimalArrayAdapter
+
+        //for navigation
+        binding.addStuffedAnimalToListTextView.setOnClickListener { view ->
+            rootView.findNavController().navigateUp()
+        }
+
+
+
         return rootView
     }
 }

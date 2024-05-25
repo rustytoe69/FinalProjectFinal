@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import com.example.finalprojectfinal.databinding.FragmentMainBinding
 import com.example.finalprojectfinal.databinding.FragmentStuffedAnimalListBinding
 
@@ -23,6 +24,18 @@ class StuffedAnimalListFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding= FragmentStuffedAnimalListBinding.inflate(inflater, container, false)
         val rootView = binding.root
+        //navigation
+        binding.newStuffedAnimalTextView.setOnClickListener { view ->
+            rootView.findNavController().navigate(R.id.action_stuffedAnimalListFragment_to_addStuffedAnimalFragment)
+        }
+
+// TODO: change this stuff for the recycler view
+//        binding.newStuffedAnimalTextView.setOnClickListener { view ->
+//            rootView.findNavController().navigate(R.id.action_stuffedAnimalListFragment_to_addStuffedAnimalFragment)
+//        }
+
+
+
         return rootView
     }
 }

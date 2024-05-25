@@ -23,6 +23,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.fragment.app.viewModels
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 
 
 class MainFragment : Fragment() {
@@ -41,11 +42,10 @@ class MainFragment : Fragment() {
         _binding= FragmentMainBinding.inflate(inflater, container, false)
         val rootView = binding.root
 
-
+        //navigation
         binding.clickMeTextView.setOnClickListener { view ->
-            val passIn =
-                MainFragmentDirections.actionMainFragmentToStuffedAnimalListFragment()
-            rootView.findNavController().navigate(passIn)
+            rootView.findNavController().navigate(R.id.action_mainFragment_to_stuffedAnimalListFragment)
+            val mySnackbar = Snackbar.make(requireActivity().findViewById(android.R.id.content),R.string.snackbar_text,Snackbar.LENGTH_SHORT).show()
         }
 
         return rootView

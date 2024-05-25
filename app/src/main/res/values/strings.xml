@@ -13,4 +13,6 @@
         <item>Bear</item>
         <item>Other</item>
     </string-array>
+
+    <string name="snackbar_text">Welcome to your new stuffed animal tracker :)</string>
 </resources>
