@@ -46,6 +46,7 @@ class MainFragment : Fragment() {
         mediaPlayer=MediaPlayer.create(context,R.raw.happymusic)
         mediaPlayer.setLooping(true)
         mediaPlayer.start()
+        mediaPlayer.seekTo(4000)
 
         //navigation
         binding.clickMeTextView.setOnClickListener { view ->
