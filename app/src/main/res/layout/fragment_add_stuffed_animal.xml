@@ -104,7 +104,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
         android:fontFamily="sans-serif-light"
-        android:text="Please put your date in as : Year-Month-Day"
+        android:text="Please put your date in as : Day-Month-Year"
         android:textColor="@color/mainText"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/dateOfBirthInput"
