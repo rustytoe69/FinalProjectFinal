@@ -39,11 +39,6 @@ class StuffedAnimalListFragment : Fragment() {
         val mAdapter = StuffedAnimalAdapter(stuffies)
         binding.recyclerView.adapter = mAdapter
 
-// TODO: change this stuff for the recycler view
-//        binding.newStuffedAnimalTextView.setOnClickListener { view ->
-//            rootView.findNavController().navigate(R.id.action_stuffedAnimalListFragment_to_addStuffedAnimalFragment)
-//        }
-
 
 
         return rootView
