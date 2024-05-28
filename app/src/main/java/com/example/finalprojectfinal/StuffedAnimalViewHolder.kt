@@ -1,13 +1,17 @@
 package com.example.finalprojectfinal
 
 import android.widget.Toast
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalprojectfinal.databinding.ListItemLayoutBinding
 import androidx.navigation.findNavController
+import androidx.fragment.app.activityViewModels
 
 
 class StuffedAnimalViewHolder(val binding: ListItemLayoutBinding) :
     RecyclerView.ViewHolder(binding.root) {
+//    private val viewModel: ViewModel by activityViewModels()
+
     private lateinit var currentStuffedAnimal: StuffedAnimal
 
     init {
