@@ -31,10 +31,13 @@ class StuffedAnimalListFragment : Fragment() {
             rootView.findNavController().navigate(R.id.action_stuffedAnimalListFragment_to_addStuffedAnimalFragment)
         }
 
-// TODO: change this stuff for the recycler view
-//        binding.newStuffedAnimalTextView.setOnClickListener { view ->
-//            rootView.findNavController().navigate(R.id.action_stuffedAnimalListFragment_to_addStuffedAnimalFragment)
-//        }
+        //hard coded stuffed animals to repllace with view model
+        val stuffies = listOf(StuffedAnimal("Cat","Bily","07-29-2004"),
+        StuffedAnimal("Penguin","Jim","05-28-2007"))
+
+        //for recycler view
+        val mAdapter = StuffedAnimalAdapter(stuffies)
+        binding.recyclerView.adapter = mAdapter
 
 
 

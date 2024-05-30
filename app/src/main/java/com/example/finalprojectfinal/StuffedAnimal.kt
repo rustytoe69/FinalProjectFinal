@@ -1,5 +1,7 @@
 package com.example.finalprojectfinal
 
+import androidx.fragment.app.activityViewModels
+
 data class StuffedAnimal(
     var animalType: String,
     val name: String,
@@ -9,6 +11,7 @@ data class StuffedAnimal(
 
 //lateinit var animalType:String
 //animalType = animalType
+//private val viewModel: ViewModel by activityViewModels()
 
     fun returnImageResourceId(): Int {
     if (animalType.equals("Cat")) return R.drawable.cat
