@@ -32,11 +32,16 @@ class StuffedAnimalListFragment : Fragment() {
         }
 
         //hard coded stuffed animals to repllace with view model
-        val stuffies = listOf(StuffedAnimal("Cat","Bily","07-29-2004"),
-        StuffedAnimal("Penguin","Jim","05-28-2007"))
+//        val stuffies = listOf(StuffedAnimal("Cat","Bily","07-29-2004"),
+//        StuffedAnimal("Penguin","Jim","05-28-2007"))
+
+        //adding stuffies from the add frag screen
+        //???????
+
+
 
         //for recycler view
-        val mAdapter = StuffedAnimalAdapter(stuffies)
+        val mAdapter = StuffedAnimalAdapter(viewModel.stuffedAnimals)
         binding.recyclerView.adapter = mAdapter
 
 

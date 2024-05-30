@@ -25,5 +25,14 @@ class StuffedAnimalDetailsFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding= FragmentStuffedAnimalDetailsBinding.inflate(inflater, container, false)
         val rootView = binding.root
+        val currentStuffedAnimal=viewModel.currentStuffedAnimal
+        //setting ui
+        binding.dateOfBirthDateTextView.text=currentStuffedAnimal.birthdate
+        binding.nameTextView.text=currentStuffedAnimal.name
+        binding.imageView.setImageResource(viewModel.currentStuffedAnimal.returnImageResourceId())
+
+
+
+
         return rootView    }
 }
