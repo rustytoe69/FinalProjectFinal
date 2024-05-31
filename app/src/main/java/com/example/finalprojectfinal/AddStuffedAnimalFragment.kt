@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
@@ -28,6 +29,9 @@ class AddStuffedAnimalFragment : Fragment() {
         _binding= FragmentAddStuffedAnimalBinding.inflate(inflater, container, false)
         val rootView = binding.root
 
+        //for current stuffedAnimal
+        val currentStuffedAnimal:StuffedAnimal = StuffedAnimal("cat","sample","00-00-0000")
+
         //for setting up spinner
         val stuffedAnimalArrayAdapter = ArrayAdapter.createFromResource(requireActivity(),
             R.array.stuffed_animal_types,android.R.layout.simple_spinner_item)
@@ -40,6 +44,28 @@ class AddStuffedAnimalFragment : Fragment() {
             val myToast = Toast.makeText(requireActivity(),R.string.toast_text, Toast.LENGTH_SHORT).show()
 
         }
+        //for spinner
+        binding.animalTypeSpinner.onItemSelectedListener =
+            object : AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    adapterView: AdapterView<*>,
+                    view: View,
+                    viewPosition: Int,
+                    rowId: Long
+                ) {
+                    currentStuffedAnimal.animalType= adapterView.getItemAtPosition(viewPosition).toString()
+                }
+
+                override fun onNothingSelected(adapterView: AdapterView<*>) {
+                }
+            }
+        //setting currentStuffedAnimalValues From Edit Texts
+        currentStuffedAnimal.name = binding.nameInput.text.toString()
+        currentStuffedAnimal.birthdate = binding.dateOfBirthInput.text.toString()
+
+
+        //adding plant to viewModel
+        viewModel.stuffedAnimals.add(currentStuffedAnimal)
 
 
 

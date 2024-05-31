@@ -10,6 +10,7 @@ class ViewModel:ViewModel() {
     val currentStuffedAnimal:StuffedAnimal
         get()=_currentStuffedAnimal
 
+
     fun addStuffedAnimal(newStuffedAnimal: StuffedAnimal){
         _stuffedAnimals.add(newStuffedAnimal)
     }

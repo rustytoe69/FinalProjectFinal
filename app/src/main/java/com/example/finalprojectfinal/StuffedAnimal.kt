@@ -4,8 +4,8 @@ import androidx.fragment.app.activityViewModels
 
 data class StuffedAnimal(
     var animalType: String,
-    val name: String,
-    val birthdate: String
+    var name: String,
+    var birthdate: String
 ) {
 
 
