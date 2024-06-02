@@ -41,7 +41,7 @@ class StuffedAnimalListFragment : Fragment() {
 
 
         //for recycler view
-        val mAdapter = StuffedAnimalAdapter(viewModel.stuffedAnimals)
+        val mAdapter = StuffedAnimalAdapter(viewModel.stuffedAnimals, viewModel)
         binding.recyclerView.adapter = mAdapter
 
 

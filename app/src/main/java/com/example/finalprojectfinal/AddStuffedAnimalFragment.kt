@@ -66,7 +66,7 @@ class AddStuffedAnimalFragment : Fragment() {
 
 
         //adding plant to viewModel
-        viewModel.stuffedAnimals.add(currentStuffedAnimal)
+        viewModel.addStuffedAnimal(currentStuffedAnimal)
 
 
 

@@ -6,11 +6,13 @@ class ViewModel:ViewModel() {
     val stuffedAnimals:MutableList<StuffedAnimal>
         get()=_stuffedAnimals
 
-    private var _currentStuffedAnimal:StuffedAnimal = StuffedAnimal("other","Bob","00-00-0000")
+    private lateinit var _currentStuffedAnimal:StuffedAnimal
     val currentStuffedAnimal:StuffedAnimal
         get()=_currentStuffedAnimal
 
-
+    fun setCurrentStuffedAnimal(StuffedAnimalEx:StuffedAnimal){
+        _currentStuffedAnimal = StuffedAnimalEx
+    }
     fun addStuffedAnimal(newStuffedAnimal: StuffedAnimal){
         _stuffedAnimals.add(newStuffedAnimal)
     }
