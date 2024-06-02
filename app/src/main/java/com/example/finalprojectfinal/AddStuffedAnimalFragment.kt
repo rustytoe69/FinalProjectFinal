@@ -22,6 +22,7 @@ class AddStuffedAnimalFragment : Fragment() {
     private val viewModel: ViewModel by activityViewModels()
 
     override fun onCreateView(
+        ASFBAOUFBAHEUFBHES
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
