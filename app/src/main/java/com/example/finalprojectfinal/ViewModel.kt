@@ -6,7 +6,7 @@ class ViewModel:ViewModel() {
     val stuffedAnimals:MutableList<StuffedAnimal>
         get()=_stuffedAnimals
 
-    private lateinit var _currentStuffedAnimal:StuffedAnimal
+    private var _currentStuffedAnimal:StuffedAnimal = StuffedAnimal("other","Bob","00-00-0000")
     val currentStuffedAnimal:StuffedAnimal
         get()=_currentStuffedAnimal
 

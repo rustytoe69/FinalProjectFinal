@@ -15,7 +15,8 @@ class StuffedAnimalAdapter (val stuffedAnimalList: List<StuffedAnimal>):
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StuffedAnimalViewHolder {
         val binding = ListItemLayoutBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         //refresh recycler view here?
-        return StuffedAnimalViewHolder(binding)    }
+        return StuffedAnimalViewHolder(binding)
+    }
 
     override fun getItemCount(): Int {
         return stuffedAnimalList.size

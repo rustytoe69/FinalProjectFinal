@@ -30,7 +30,7 @@ class AddStuffedAnimalFragment : Fragment() {
         val rootView = binding.root
 
         //for current stuffedAnimal
-        val currentStuffedAnimal:StuffedAnimal = StuffedAnimal("cat","sample","00-00-0000")
+        val currentStuffedAnimal:StuffedAnimal = StuffedAnimal("other","Bob","00-00-0000")
 
         //for setting up spinner
         val stuffedAnimalArrayAdapter = ArrayAdapter.createFromResource(requireActivity(),
@@ -59,6 +59,7 @@ class AddStuffedAnimalFragment : Fragment() {
                 override fun onNothingSelected(adapterView: AdapterView<*>) {
                 }
             }
+
         //setting currentStuffedAnimalValues From Edit Texts
         currentStuffedAnimal.name = binding.nameInput.text.toString()
         currentStuffedAnimal.birthdate = binding.dateOfBirthInput.text.toString()
