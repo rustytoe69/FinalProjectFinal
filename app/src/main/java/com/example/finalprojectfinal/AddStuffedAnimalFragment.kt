@@ -30,6 +30,7 @@ class AddStuffedAnimalFragment : Fragment() {
         val rootView = binding.root
 
 
+
         //for current stuffedAnimal
         val currentStuffedAnimal:StuffedAnimal = StuffedAnimal("other","Bob","00-00-0000")
 

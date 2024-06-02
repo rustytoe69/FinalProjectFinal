@@ -17,7 +17,6 @@ class StuffedAnimalViewHolder(val binding: ListItemLayoutBinding, val viewModel:
     init {
         binding.root.setOnClickListener { view ->
             //this code is for responding to presses in the recycler view
-
             viewModel.setCurrentStuffedAnimal(currentStuffedAnimal)
             binding.root.findNavController()
                 .navigate(R.id.action_stuffedAnimalListFragment_to_stuffedAnimalDetailsFragment)
