@@ -22,12 +22,14 @@ class AddStuffedAnimalFragment : Fragment() {
     private val viewModel: ViewModel by activityViewModels()
 
     override fun onCreateView(
+        ASFBAOUFBAHEUFBHES
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         _binding= FragmentAddStuffedAnimalBinding.inflate(inflater, container, false)
         val rootView = binding.root
+
 
 
         //for current stuffedAnimal
