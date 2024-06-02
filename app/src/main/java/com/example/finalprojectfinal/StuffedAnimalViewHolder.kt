@@ -16,18 +16,17 @@ class StuffedAnimalViewHolder(val binding: ListItemLayoutBinding, val viewModel:
 
     init {
         binding.root.setOnClickListener { view ->
-            //should refresh recycler view here????
             //this code is for responding to presses in the recycler view
-            binding.root.findNavController()
-                .navigate(R.id.action_stuffedAnimalListFragment_to_stuffedAnimalDetailsFragment)
 
             viewModel.setCurrentStuffedAnimal(currentStuffedAnimal)
+            binding.root.findNavController()
+                .navigate(R.id.action_stuffedAnimalListFragment_to_stuffedAnimalDetailsFragment)
         }
     }
 
     fun bindStuffedAnimal(stuffedAnimal: StuffedAnimal) {
         currentStuffedAnimal = stuffedAnimal
-        binding.stuffedAnimalName.text = currentStuffedAnimal.name
+        binding.stuffedAnimalNameText.text = currentStuffedAnimal.name
         binding.stuffedAnimalImage.setImageResource(currentStuffedAnimal.returnImageResourceId())
     }
 }

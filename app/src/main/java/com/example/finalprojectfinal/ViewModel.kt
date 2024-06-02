@@ -13,7 +13,4 @@ class ViewModel:ViewModel() {
     fun setCurrentStuffedAnimal(StuffedAnimalEx:StuffedAnimal){
         _currentStuffedAnimal = StuffedAnimalEx
     }
-    fun addStuffedAnimal(newStuffedAnimal: StuffedAnimal){
-        _stuffedAnimals.add(newStuffedAnimal)
-    }
 }

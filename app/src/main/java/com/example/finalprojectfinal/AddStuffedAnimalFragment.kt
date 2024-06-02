@@ -29,6 +29,7 @@ class AddStuffedAnimalFragment : Fragment() {
         _binding= FragmentAddStuffedAnimalBinding.inflate(inflater, container, false)
         val rootView = binding.root
 
+
         //for current stuffedAnimal
         val currentStuffedAnimal:StuffedAnimal = StuffedAnimal("other","Bob","00-00-0000")
 
@@ -53,7 +54,7 @@ class AddStuffedAnimalFragment : Fragment() {
                     viewPosition: Int,
                     rowId: Long
                 ) {
-                    currentStuffedAnimal.animalType= adapterView.getItemAtPosition(viewPosition).toString()
+                    currentStuffedAnimal.animalType=adapterView.getItemAtPosition(viewPosition).toString()
                 }
 
                 override fun onNothingSelected(adapterView: AdapterView<*>) {
@@ -66,7 +67,7 @@ class AddStuffedAnimalFragment : Fragment() {
 
 
         //adding plant to viewModel
-        viewModel.addStuffedAnimal(currentStuffedAnimal)
+        viewModel.stuffedAnimals.add(currentStuffedAnimal)
 
 
 
